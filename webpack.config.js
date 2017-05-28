@@ -25,6 +25,7 @@ module.exports = function(env) {
       hot: true,
       port: 7500,
       contentBase: path.join(__dirname, 'public'),
+      historyApiFallback: true,
       publicPath:'/',
       proxy:{
         '/api': {

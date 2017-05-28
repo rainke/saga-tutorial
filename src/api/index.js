@@ -1,5 +1,6 @@
 import axios from 'axios';
 
-export const getTodoList = (params) => 
+export const getTodos = (params) => 
   axios.get('/api/list', {params})
-    .then(result => result.data);
+    .then(result => ({todos: result.data}))
+    .catch(err => ({err}))
