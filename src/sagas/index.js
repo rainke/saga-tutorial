@@ -1,4 +1,4 @@
-import {takeEvery, put} from 'redux-saga/effects'
+import {takeLatest, put} from 'redux-saga/effects'
 import * as api from '@/api'
 
 function* fetchTodo(action){
@@ -11,7 +11,7 @@ function* fetchTodo(action){
 }
 
 function* fetchTodoSaga(){
-  yield takeEvery('FETCH_TODO', fetchTodo)
+  yield takeLatest('FETCH_TODO', fetchTodo)
 }
 
 export default fetchTodoSaga
